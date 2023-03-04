@@ -1,13 +1,136 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&family=Baloo+Paaji+2:wght@500&family=Dancing+Script:wght@700&family=Kanit:wght@300&family=Karla&family=Kaushan+Script&family=Khula&family=Laila&family=Montserrat:ital,wght@0,200;0,500;1,400&family=Nunito&family=Nunito+Sans:wght@300&family=Oswald:wght@300&family=Oxygen&family=Poppins:wght@300&family=Prompt:wght@300&family=Roboto&family=Rubik&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Rubik", sans-serif;
+}
+:root {
+  --color1: #feffff;
+  --mainColor: #17252a;
+  --subColor: #3aafa9;
+  --borderColor: #2b7a78;
+  --background: #def2f1;
+}
+.main-app {
+  height: 100vh;
+  width: 100%;
+  background: var(--color1);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav_bar {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mainColor);
+  color: var(--color1);
+}
+.nav_bar .mainHeading {
+  font-size: 45px;
+  text-transform: capitalize;
+}
+.loadingWrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+}
+
+.mainQuestions {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+
+  height: 70vh;
+}
+.mainQuestions .question {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.btn-box button {
+  padding: 15px 30px;
+  max-width: 100px;
+  width: 100%;
+  border: 3px solid var(--subColor);
+  font-size: 16px;
+  border-radius: 23px;
+  background-color: var(--mainColor);
+  color: var(--color1);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn-box button:hover {
+  background-color: var(--color1);
+  border-color: var(--mainColor);
+  color: var(--mainColor);
+}
+.btn-box .disable button {
+  background-color: var(--color1);
+  border-color: var(--mainColor);
+  color: var(--mainColor);
+  cursor: not-allowed;
+}
+.questionItem{
+  font-size: 18px;
+}
+.chapter span{
+  color: var(--borderColor);
+  font-size: 28px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 360px) {
+  .mainQuestions {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .nav_bar .mainHeading {
+    font-size: 35px;
+    text-align: center;
+  }
+  .question .questionItem{
+    font-size: 12px;
+    margin: 0px 10px;
+    text-align: justify;
+  }
+  .question .chapter{
+    font-size: 23px;
+   margin-bottom: 12px;
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 480px) {
+  .mainQuestions {
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .mainQuestions {
+    height: 60vh;
+  }
+  .question .questionItem{
+    font-size: 14px;
+    margin: 0px 20px;
+    text-align: justify;
+  }
+  .mainQuestions .question {
+    height: unset;
+
+  }
 }
