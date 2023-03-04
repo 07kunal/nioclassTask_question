@@ -32,7 +32,7 @@
   font-size: 45px;
   text-transform: capitalize;
 }
-.loadingWrap{
+.loadingWrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,10 +86,10 @@
   color: var(--mainColor);
   cursor: not-allowed;
 }
-.questionItem{
+.questionItem {
   font-size: 18px;
 }
-.chapter span{
+.chapter span {
   color: var(--borderColor);
   font-size: 28px;
   font-weight: 600;
@@ -105,14 +105,17 @@
     font-size: 35px;
     text-align: center;
   }
-  .question .questionItem{
+  .question .questionItem {
     font-size: 12px;
     margin: 0px 10px;
     text-align: justify;
   }
-  .question .chapter{
+  .question .chapter {
     font-size: 23px;
-   margin-bottom: 12px;
+    margin-bottom: 12px;
+  }
+  .chapter span {
+    font-size: 22px;
   }
 }
 @media screen and (min-width: 361px) and (max-width: 480px) {
@@ -124,13 +127,12 @@
   .mainQuestions {
     height: 60vh;
   }
-  .question .questionItem{
+  .question .questionItem {
     font-size: 14px;
     margin: 0px 20px;
     text-align: justify;
   }
   .mainQuestions .question {
     height: unset;
-
   }
 }
